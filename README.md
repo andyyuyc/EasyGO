@@ -1,1 +1,1 @@
-# EasyGo
+# EasyGO
