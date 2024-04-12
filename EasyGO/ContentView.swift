@@ -13,7 +13,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            Route()
+            FirstPage()
                 .tabItem {
                     
                 }

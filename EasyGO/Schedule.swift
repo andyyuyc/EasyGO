@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Schedule: View {
+    
+    @State public var isStopView = false
+    
     var body: some View {
         ZStack() {
             ZStack() {
@@ -61,6 +64,38 @@ struct Schedule: View {
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
                 .frame(width: 43, height: 44)
                 .offset(x: -187.50, y: -340)
+                
+                ZStack() {
+                    
+                    NavigationLink(isActive: $isStopView) {
+                        Stop()
+                    } label: {
+                    }
+                    
+                    Button(action: {
+                        isStopView = true
+                    }) {
+                        
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 60, height: 60)
+                            .background(
+                                Image("Exit")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .fullScreenCover(isPresented: $isStopView, content: {
+                                        Stop()
+                                        
+                                    })
+                            );
+                        
+                    }
+                        
+                        
+                    }
+                    .offset(x: 180, y: 130)
+                
+                
             }
             .frame(width: 430, height: 846)
             .offset(x: 0, y: -53)

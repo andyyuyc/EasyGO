@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FirstPage: View {
+    
+    @State public var isScheduleView = false
+    
     var body: some View {
         ZStack() {
             ZStack() {
@@ -29,16 +32,35 @@ struct FirstPage: View {
                             .aspectRatio(contentMode: .fill)
                     )
                 
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 430, height: 287)
-                    .background(
-                        Image("FirstPage")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    )
-                    .cornerRadius(25)
-                    .offset(x: 0, y: 363)
+                
+                NavigationLink(isActive: $isScheduleView) {
+                    Schedule()
+                } label: {
+                }
+    
+                Button(action: {
+                    isScheduleView = true
+                }) {
+    
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 430, height: 287)
+                        .background(
+                            Image("FirstPage")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .fullScreenCover(isPresented: $isScheduleView, content: {
+                                    Schedule()
+    
+                                })
+                        );
+    
+                }
+                .offset(x: 0, y: 363)
+                
+                
+                
+                
                 
                 HStack(spacing: 0) {
                     Text("Search")
@@ -66,7 +88,9 @@ struct FirstPage: View {
             .offset(x: 0, y: -53)
             
             
+            
         }
+
     }
 }
 
