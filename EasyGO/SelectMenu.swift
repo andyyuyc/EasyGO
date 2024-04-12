@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectMenu: View {
     
-    @State public var isStopView = false
+    @State public var isContentView = false
     
     var body: some View {
         ZStack() {
@@ -183,13 +183,13 @@ struct SelectMenu: View {
             
             ZStack() {
                 
-                NavigationLink(isActive: $isStopView) {
-                    Stop()
+                NavigationLink(isActive: $isContentView) {
+                    ContentView()
                 } label: {
                 }
                 
                 Button(action: {
-                    isStopView = true
+                    isContentView = true
                 }) {
                     
                     Rectangle()
@@ -199,8 +199,8 @@ struct SelectMenu: View {
                             Image("Exit")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .fullScreenCover(isPresented: $isStopView, content: {
-                                    Stop()
+                                .fullScreenCover(isPresented: $isContentView, content: {
+                                    ContentView()
                                     
                                 })
                         );
