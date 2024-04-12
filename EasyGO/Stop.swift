@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+
+
 struct Stop: View {
+    
+    @State public var isMenuView = false
+    
     var body: some View {
         ZStack() {
             ZStack() {
@@ -30,15 +35,15 @@ struct Stop: View {
                     )
                 
                 Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 430, height: 426)
-                        .background(
-                            Image("Stop_1")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        )
-                        .cornerRadius(25)
-                        .offset(x: 0, y: 210)
+                    .foregroundColor(.clear)
+                    .frame(width: 430, height: 426)
+                    .background(
+                        Image("Stop_1")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    )
+                    .cornerRadius(25)
+                    .offset(x: 0, y: 210)
                 
                 HStack(spacing: 0) {
                     Text("Search")
@@ -51,11 +56,34 @@ struct Stop: View {
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
                 .offset(x: 23.50, y: -340)
+                
+                
+                
                 HStack(spacing: 16) {
-                    HStack(alignment: .top, spacing: 10) {
-                        Image("Menu")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
+                    NavigationStack {
+                        HStack(alignment: .top, spacing: 10) {
+                            //                            NavigationLink(destination: Menu(), isActive: $isMenuView) { EmptyView()}.hidden().disabled(true)
+                            
+                            NavigationLink(isActive: $isMenuView) {
+                                SelectMenu()
+                            } label: {
+                            }
+                            
+                            Button(action: {
+                                
+                                isMenuView = true
+                            }) {
+                                Image("Menu")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            }
+                            .fullScreenCover(isPresented: $isMenuView, content: {
+                                SelectMenu()
+                                
+                            })
+                            
+                            
+                        }
                     }
                 }
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))

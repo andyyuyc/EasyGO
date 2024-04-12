@@ -22,7 +22,7 @@
 		A18BD2D52BC7B898002A431D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D42BC7B898002A431D /* Profile.swift */; };
 		A18BD2D72BC7BD6C002A431D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D62BC7BD6C002A431D /* Schedule.swift */; };
 		A18BD2D92BC7BE26002A431D /* Alarms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D82BC7BE26002A431D /* Alarms.swift */; };
-		A18BD2DB2BC7C0E9002A431D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DA2BC7C0E9002A431D /* Menu.swift */; };
+		A18BD2DB2BC7C0E9002A431D /* SelectMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */; };
 		A18BD2DD2BC84BAD002A431D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DC2BC84BAD002A431D /* Home.swift */; };
 		A18BD2DF2BC84DDB002A431D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DE2BC84DDB002A431D /* Request.swift */; };
 /* End PBXBuildFile section */
@@ -63,7 +63,7 @@
 		A18BD2D42BC7B898002A431D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A18BD2D62BC7BD6C002A431D /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		A18BD2D82BC7BE26002A431D /* Alarms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarms.swift; sourceTree = "<group>"; };
-		A18BD2DA2BC7C0E9002A431D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMenu.swift; sourceTree = "<group>"; };
 		A18BD2DC2BC84BAD002A431D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		A18BD2DE2BC84DDB002A431D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +127,7 @@
 				A18BD2D42BC7B898002A431D /* Profile.swift */,
 				A18BD2D62BC7BD6C002A431D /* Schedule.swift */,
 				A18BD2D82BC7BE26002A431D /* Alarms.swift */,
-				A18BD2DA2BC7C0E9002A431D /* Menu.swift */,
+				A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */,
 				A18BD2DE2BC84DDB002A431D /* Request.swift */,
 				A18BD2A62BC72633002A431D /* Assets.xcassets */,
 				A18BD2A82BC72633002A431D /* Preview Content */,
@@ -296,7 +296,7 @@
 				A18BD2CD2BC7B1F7002A431D /* Route.swift in Sources */,
 				A18BD2D92BC7BE26002A431D /* Alarms.swift in Sources */,
 				A18BD2D72BC7BD6C002A431D /* Schedule.swift in Sources */,
-				A18BD2DB2BC7C0E9002A431D /* Menu.swift in Sources */,
+				A18BD2DB2BC7C0E9002A431D /* SelectMenu.swift in Sources */,
 				A18BD2CF2BC7B3D0002A431D /* Stop.swift in Sources */,
 				A18BD2D32BC7B647002A431D /* FirstPage.swift in Sources */,
 				A18BD2D12BC7B53C002A431D /* Message.swift in Sources */,

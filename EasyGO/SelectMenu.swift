@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct Menu: View {
+struct SelectMenu: View {
+    
+    @State public var isStopView = false
+    
     var body: some View {
         ZStack() {
             
@@ -42,16 +45,7 @@ struct Menu: View {
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
                 .offset(x: 23.50, y: -340)
-                HStack(spacing: 16) {
-                    HStack(alignment: .top, spacing: 10) {
-                        Image("Menu")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    }
-                }
-                .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
-                .frame(width: 43, height: 44)
-                .offset(x: -187.50, y: -340)
+                
                 
                 
                 
@@ -174,7 +168,6 @@ struct Menu: View {
                 .frame(width: 49, height: 46)
                 .offset(x: -179.50, y: -278)
             
-            
             ZStack() {
                 Rectangle()
                     .foregroundColor(.clear)
@@ -188,15 +181,49 @@ struct Menu: View {
             .offset(x: -73, y: -15)
             
             
+            ZStack() {
+                
+                NavigationLink(isActive: $isStopView) {
+                    Stop()
+                } label: {
+                }
+                
+                Button(action: {
+                    isStopView = true
+                }) {
+                    
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 60, height: 60)
+                        .background(
+                            Image("Exit")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .fullScreenCover(isPresented: $isStopView, content: {
+                                    Stop()
+                                    
+                                })
+                        );
+                    
+                    
+                    
+                    
+                }
+                .offset(x: 30, y: -390)
+                
+                
+            }
         }
         .frame(width: 430, height: 932)
         .background(.white);
     }
 }
 
-struct Menu_Previews: PreviewProvider {
+
+struct SelectMenu_Previews: PreviewProvider {
     static var previews: some View {
-        Menu()
+        SelectMenu() 
     }
 }
+
 
