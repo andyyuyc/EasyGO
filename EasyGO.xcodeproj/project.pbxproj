@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A18BD2A12BC72632002A431D /* EasyGOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A02BC72632002A431D /* EasyGOApp.swift */; };
+		A18BD2A32BC72632002A431D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A22BC72632002A431D /* ContentView.swift */; };
+		A18BD2A52BC72632002A431D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A42BC72632002A431D /* Item.swift */; };
+		A18BD2A72BC72633002A431D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18BD2A62BC72633002A431D /* Assets.xcassets */; };
+		A18BD2AA2BC72633002A431D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18BD2A92BC72633002A431D /* Preview Assets.xcassets */; };
+		A18BD2B42BC72633002A431D /* EasyGOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2B32BC72633002A431D /* EasyGOTests.swift */; };
+		A18BD2BE2BC72633002A431D /* EasyGOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2BD2BC72633002A431D /* EasyGOUITests.swift */; };
+		A18BD2C02BC72633002A431D /* EasyGOUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2BF2BC72633002A431D /* EasyGOUITestsLaunchTests.swift */; };
+		A18BD2CD2BC7B1F7002A431D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2CC2BC7B1F7002A431D /* Route.swift */; };
+		A18BD2CF2BC7B3D0002A431D /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2CE2BC7B3D0002A431D /* Stop.swift */; };
+		A18BD2D12BC7B53C002A431D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D02BC7B53C002A431D /* Message.swift */; };
+		A18BD2D32BC7B647002A431D /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D22BC7B647002A431D /* FirstPage.swift */; };
+		A18BD2D52BC7B898002A431D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D42BC7B898002A431D /* Profile.swift */; };
+		A18BD2D72BC7BD6C002A431D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D62BC7BD6C002A431D /* Schedule.swift */; };
+		A18BD2D92BC7BE26002A431D /* Alarms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D82BC7BE26002A431D /* Alarms.swift */; };
+		A18BD2DB2BC7C0E9002A431D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DA2BC7C0E9002A431D /* Menu.swift */; };
+		A18BD2DD2BC84BAD002A431D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DC2BC84BAD002A431D /* Home.swift */; };
+		A18BD2DF2BC84DDB002A431D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DE2BC84DDB002A431D /* Request.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A18BD2B02BC72633002A431D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18BD2952BC72632002A431D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A18BD29C2BC72632002A431D;
+			remoteInfo = EasyGO;
+		};
+		A18BD2BA2BC72633002A431D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18BD2952BC72632002A431D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A18BD29C2BC72632002A431D;
+			remoteInfo = EasyGO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A18BD29D2BC72632002A431D /* EasyGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18BD2A02BC72632002A431D /* EasyGOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOApp.swift; sourceTree = "<group>"; };
+		A18BD2A22BC72632002A431D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A18BD2A42BC72632002A431D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A18BD2A62BC72633002A431D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A18BD2A92BC72633002A431D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A18BD2AF2BC72633002A431D /* EasyGOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyGOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18BD2B32BC72633002A431D /* EasyGOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOTests.swift; sourceTree = "<group>"; };
+		A18BD2B92BC72633002A431D /* EasyGOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyGOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18BD2BD2BC72633002A431D /* EasyGOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOUITests.swift; sourceTree = "<group>"; };
+		A18BD2BF2BC72633002A431D /* EasyGOUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A18BD2CC2BC7B1F7002A431D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		A18BD2CE2BC7B3D0002A431D /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		A18BD2D02BC7B53C002A431D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A18BD2D22BC7B647002A431D /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		A18BD2D42BC7B898002A431D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A18BD2D62BC7BD6C002A431D /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		A18BD2D82BC7BE26002A431D /* Alarms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarms.swift; sourceTree = "<group>"; };
+		A18BD2DA2BC7C0E9002A431D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		A18BD2DC2BC84BAD002A431D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		A18BD2DE2BC84DDB002A431D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A18BD29A2BC72632002A431D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A18BD2AC2BC72633002A431D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A18BD2B62BC72633002A431D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A18BD2942BC72632002A431D = {
+			isa = PBXGroup;
+			children = (
+				A18BD29F2BC72632002A431D /* EasyGO */,
+				A18BD2B22BC72633002A431D /* EasyGOTests */,
+				A18BD2BC2BC72633002A431D /* EasyGOUITests */,
+				A18BD29E2BC72632002A431D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A18BD29E2BC72632002A431D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A18BD29D2BC72632002A431D /* EasyGO.app */,
+				A18BD2AF2BC72633002A431D /* EasyGOTests.xctest */,
+				A18BD2B92BC72633002A431D /* EasyGOUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A18BD29F2BC72632002A431D /* EasyGO */ = {
+			isa = PBXGroup;
+			children = (
+				A18BD2A02BC72632002A431D /* EasyGOApp.swift */,
+				A18BD2A42BC72632002A431D /* Item.swift */,
+				A18BD2DC2BC84BAD002A431D /* Home.swift */,
+				A18BD2A22BC72632002A431D /* ContentView.swift */,
+				A18BD2CC2BC7B1F7002A431D /* Route.swift */,
+				A18BD2CE2BC7B3D0002A431D /* Stop.swift */,
+				A18BD2D02BC7B53C002A431D /* Message.swift */,
+				A18BD2D22BC7B647002A431D /* FirstPage.swift */,
+				A18BD2D42BC7B898002A431D /* Profile.swift */,
+				A18BD2D62BC7BD6C002A431D /* Schedule.swift */,
+				A18BD2D82BC7BE26002A431D /* Alarms.swift */,
+				A18BD2DA2BC7C0E9002A431D /* Menu.swift */,
+				A18BD2DE2BC84DDB002A431D /* Request.swift */,
+				A18BD2A62BC72633002A431D /* Assets.xcassets */,
+				A18BD2A82BC72633002A431D /* Preview Content */,
+			);
+			path = EasyGO;
+			sourceTree = "<group>";
+		};
+		A18BD2A82BC72633002A431D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A18BD2A92BC72633002A431D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A18BD2B22BC72633002A431D /* EasyGOTests */ = {
+			isa = PBXGroup;
+			children = (
+				A18BD2B32BC72633002A431D /* EasyGOTests.swift */,
+			);
+			path = EasyGOTests;
+			sourceTree = "<group>";
+		};
+		A18BD2BC2BC72633002A431D /* EasyGOUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A18BD2BD2BC72633002A431D /* EasyGOUITests.swift */,
+				A18BD2BF2BC72633002A431D /* EasyGOUITestsLaunchTests.swift */,
+			);
+			path = EasyGOUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A18BD29C2BC72632002A431D /* EasyGO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A18BD2C32BC72633002A431D /* Build configuration list for PBXNativeTarget "EasyGO" */;
+			buildPhases = (
+				A18BD2992BC72632002A431D /* Sources */,
+				A18BD29A2BC72632002A431D /* Frameworks */,
+				A18BD29B2BC72632002A431D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyGO;
+			productName = EasyGO;
+			productReference = A18BD29D2BC72632002A431D /* EasyGO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A18BD2AE2BC72633002A431D /* EasyGOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A18BD2C62BC72633002A431D /* Build configuration list for PBXNativeTarget "EasyGOTests" */;
+			buildPhases = (
+				A18BD2AB2BC72633002A431D /* Sources */,
+				A18BD2AC2BC72633002A431D /* Frameworks */,
+				A18BD2AD2BC72633002A431D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A18BD2B12BC72633002A431D /* PBXTargetDependency */,
+			);
+			name = EasyGOTests;
+			productName = EasyGOTests;
+			productReference = A18BD2AF2BC72633002A431D /* EasyGOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A18BD2B82BC72633002A431D /* EasyGOUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A18BD2C92BC72633002A431D /* Build configuration list for PBXNativeTarget "EasyGOUITests" */;
+			buildPhases = (
+				A18BD2B52BC72633002A431D /* Sources */,
+				A18BD2B62BC72633002A431D /* Frameworks */,
+				A18BD2B72BC72633002A431D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A18BD2BB2BC72633002A431D /* PBXTargetDependency */,
+			);
+			name = EasyGOUITests;
+			productName = EasyGOUITests;
+			productReference = A18BD2B92BC72633002A431D /* EasyGOUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A18BD2952BC72632002A431D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A18BD29C2BC72632002A431D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A18BD2AE2BC72633002A431D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A18BD29C2BC72632002A431D;
+					};
+					A18BD2B82BC72633002A431D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A18BD29C2BC72632002A431D;
+					};
+				};
+			};
+			buildConfigurationList = A18BD2982BC72632002A431D /* Build configuration list for PBXProject "EasyGO" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A18BD2942BC72632002A431D;
+			productRefGroup = A18BD29E2BC72632002A431D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A18BD29C2BC72632002A431D /* EasyGO */,
+				A18BD2AE2BC72633002A431D /* EasyGOTests */,
+				A18BD2B82BC72633002A431D /* EasyGOUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A18BD29B2BC72632002A431D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18BD2AA2BC72633002A431D /* Preview Assets.xcassets in Resources */,
+				A18BD2A72BC72633002A431D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A18BD2AD2BC72633002A431D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A18BD2B72BC72633002A431D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A18BD2992BC72632002A431D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18BD2A32BC72632002A431D /* ContentView.swift in Sources */,
+				A18BD2DF2BC84DDB002A431D /* Request.swift in Sources */,
+				A18BD2D52BC7B898002A431D /* Profile.swift in Sources */,
+				A18BD2CD2BC7B1F7002A431D /* Route.swift in Sources */,
+				A18BD2D92BC7BE26002A431D /* Alarms.swift in Sources */,
+				A18BD2D72BC7BD6C002A431D /* Schedule.swift in Sources */,
+				A18BD2DB2BC7C0E9002A431D /* Menu.swift in Sources */,
+				A18BD2CF2BC7B3D0002A431D /* Stop.swift in Sources */,
+				A18BD2D32BC7B647002A431D /* FirstPage.swift in Sources */,
+				A18BD2D12BC7B53C002A431D /* Message.swift in Sources */,
+				A18BD2A52BC72632002A431D /* Item.swift in Sources */,
+				A18BD2DD2BC84BAD002A431D /* Home.swift in Sources */,
+				A18BD2A12BC72632002A431D /* EasyGOApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A18BD2AB2BC72633002A431D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18BD2B42BC72633002A431D /* EasyGOTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A18BD2B52BC72633002A431D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18BD2C02BC72633002A431D /* EasyGOUITestsLaunchTests.swift in Sources */,
+				A18BD2BE2BC72633002A431D /* EasyGOUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A18BD2B12BC72633002A431D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A18BD29C2BC72632002A431D /* EasyGO */;
+			targetProxy = A18BD2B02BC72633002A431D /* PBXContainerItemProxy */;
+		};
+		A18BD2BB2BC72633002A431D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A18BD29C2BC72632002A431D /* EasyGO */;
+			targetProxy = A18BD2BA2BC72633002A431D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A18BD2C12BC72633002A431D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A18BD2C22BC72633002A431D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A18BD2C42BC72633002A431D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyGO/Preview Content\"";
+				DEVELOPMENT_TEAM = 6Z3LZX7N42;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyyuyc.EasyGO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A18BD2C52BC72633002A431D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyGO/Preview Content\"";
+				DEVELOPMENT_TEAM = 6Z3LZX7N42;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyyuyc.EasyGO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A18BD2C72BC72633002A431D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Z3LZX7N42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyyuyc.EasyGOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyGO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasyGO";
+			};
+			name = Debug;
+		};
+		A18BD2C82BC72633002A431D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Z3LZX7N42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyyuyc.EasyGOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyGO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasyGO";
+			};
+			name = Release;
+		};
+		A18BD2CA2BC72633002A431D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Z3LZX7N42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyyuyc.EasyGOUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyGO;
+			};
+			name = Debug;
+		};
+		A18BD2CB2BC72633002A431D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Z3LZX7N42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyyuyc.EasyGOUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyGO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A18BD2982BC72632002A431D /* Build configuration list for PBXProject "EasyGO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A18BD2C12BC72633002A431D /* Debug */,
+				A18BD2C22BC72633002A431D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A18BD2C32BC72633002A431D /* Build configuration list for PBXNativeTarget "EasyGO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A18BD2C42BC72633002A431D /* Debug */,
+				A18BD2C52BC72633002A431D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A18BD2C62BC72633002A431D /* Build configuration list for PBXNativeTarget "EasyGOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A18BD2C72BC72633002A431D /* Debug */,
+				A18BD2C82BC72633002A431D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A18BD2C92BC72633002A431D /* Build configuration list for PBXNativeTarget "EasyGOUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A18BD2CA2BC72633002A431D /* Debug */,
+				A18BD2CB2BC72633002A431D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A18BD2952BC72632002A431D /* Project object */;
+}
