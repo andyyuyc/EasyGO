@@ -44,7 +44,7 @@ struct SelectMenu: View {
                 .frame(width: 355, height: 36)
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
-                .offset(x: 23.50, y: -340)
+                .offset(x: 23.50, y: -330)
                 
                 
                 

@@ -10,6 +10,7 @@ import SwiftUI
 struct Schedule: View {
     
     @State public var isContentView = false
+    @State public var isAlarmsView = false
     
     var body: some View {
         ZStack() {
@@ -33,15 +34,15 @@ struct Schedule: View {
                     )
                 
                 Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 430, height: 419)
-                        .background(
-                            Image("Schedule_1")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        )
-                        .cornerRadius(21)
-                        .offset(x: 0, y: 300)
+                    .foregroundColor(.clear)
+                    .frame(width: 430, height: 419)
+                    .background(
+                        Image("Schedule_1")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    )
+                    .cornerRadius(21)
+                    .offset(x: 0, y: 300)
                 
                 HStack(spacing: 0) {
                     Text("Search")
@@ -53,7 +54,7 @@ struct Schedule: View {
                 .frame(width: 355, height: 36)
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
-                .offset(x: 23.50, y: -340)
+                .offset(x: 23.50, y: -330)
                 HStack(spacing: 16) {
                     HStack(alignment: .top, spacing: 10) {
                         Image("Menu")
@@ -90,10 +91,41 @@ struct Schedule: View {
                             );
                         
                     }
+                    
+                    
+                }
+                .offset(x: 180, y: 130)
+                
+                
+                
+                
+                ZStack() {
+                    
+                    NavigationLink(isActive: $isAlarmsView) {
+                        Alarms()
+                    } label: {
+                    }
+                    
+                    Button(action: {
+                        isAlarmsView = true
+                    }) {
                         
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 60, height: 60)
+                            .background(
+                                Image("AlarmButton")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .fullScreenCover(isPresented: $isAlarmsView, content: {
+                                        Alarms()
+                                        
+                                    })
+                            );
                         
                     }
-                    .offset(x: 180, y: 130)
+                }
+                .offset(x: 180, y: 270)
                 
                 
             }

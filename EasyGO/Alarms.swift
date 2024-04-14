@@ -10,6 +10,7 @@ import SwiftUI
 struct Alarms: View {
     
     @State private var selectedDate = Date()
+    @State public var isContentView = false
     
     var body: some View {
         ZStack() {
@@ -50,11 +51,15 @@ struct Alarms: View {
                                     .frame(width: 200, height: 100)
                                     .offset(x: -30, y: 400)
                 
-                Text("Set")
-                    .font(Font.custom("SF Pro", size: 20))
-                    .lineSpacing(22)
-                    .foregroundColor(Color(red: 1, green: 0, blue: 0))
-                    .offset(x: 153.50, y: 400)
+//                Button(action: {
+//
+//                }) {
+//                    Text("Set")
+//                        .font(Font.custom("SF Pro", size: 20))
+//                        .lineSpacing(22)
+//                        .foregroundColor(Color(red: 1, green: 0, blue: 0))
+//                        .offset(x: 153.50, y: 400)
+//                }
                 
                 
                 HStack(spacing: 0) {
@@ -67,7 +72,7 @@ struct Alarms: View {
                 .frame(width: 355, height: 36)
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
-                .offset(x: 23.50, y: -340)
+                .offset(x: 23.50, y: -330)
                 HStack(spacing: 16) {
                     HStack(alignment: .top, spacing: 10) {
                         Image("Menu")
@@ -78,6 +83,51 @@ struct Alarms: View {
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
                 .frame(width: 43, height: 44)
                 .offset(x: -187.50, y: -340)
+                
+                
+                
+                ZStack() {
+                    
+                    NavigationLink(isActive: $isContentView) {
+                        ContentView()
+                    } label: {
+                    }
+                    
+                    Button(action: {
+                        isContentView = true
+                    }) {
+                        
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 60, height: 60)
+                            .background(
+                                Image("Exit")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .fullScreenCover(isPresented: $isContentView, content: {
+                                        ContentView()
+                                        
+                                    })
+                            );
+                        
+                    }
+                        
+                        
+                    }
+                    .offset(x: 180, y: 130)
+                
+                ZStack() {
+                    Button(action: {
+                        
+                    }) {
+                        Text("Set")
+                            .font(Font.custom("SF Pro", size: 20))
+                            .lineSpacing(22)
+                            .foregroundColor(Color(red: 1, green: 0, blue: 0))
+                    }
+                    .offset(x: 153.50, y: 400)
+                }
+                
                 
                 
                 

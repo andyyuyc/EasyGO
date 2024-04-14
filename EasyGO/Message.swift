@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct Message: View {
+    
+    @State public var isAlarmsView = false
+    @State public var isMenuView = false
+    
     var body: some View {
         ZStack() {
             ZStack() {
@@ -50,20 +54,74 @@ struct Message: View {
                 .frame(width: 355, height: 36)
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
-                .offset(x: 23.50, y: -340)
+                .offset(x: 23.50, y: -330)
+                
+                
                 HStack(spacing: 16) {
-                    HStack(alignment: .top, spacing: 10) {
-                        Image("Menu")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
+                    NavigationStack {
+                        HStack(alignment: .top, spacing: 10) {
+                            //                            NavigationLink(destination: Menu(), isActive: $isMenuView) { EmptyView()}.hidden().disabled(true)
+                            
+                            NavigationLink(isActive: $isMenuView) {
+                                SelectMenu()
+                            } label: {
+                            }
+                            
+                            Button(action: {
+                                
+                                isMenuView = true
+                            }) {
+                                Image("Menu")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            }
+                            .fullScreenCover(isPresented: $isMenuView, content: {
+                                SelectMenu()
+                                
+                            })
+                            
+                            
+                        }
                     }
                 }
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
                 .frame(width: 43, height: 44)
                 .offset(x: -187.50, y: -340)
+                
+                
             }
             .frame(width: 430, height: 846)
             .offset(x: 0, y: -53)
+            
+            
+            
+            
+            ZStack() {
+                
+                NavigationLink(isActive: $isAlarmsView) {
+                    Alarms()
+                } label: {
+                }
+                
+                Button(action: {
+                    isAlarmsView = true
+                }) {
+                    
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 60, height: 60)
+                        .background(
+                            Image("AlarmButton")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .fullScreenCover(isPresented: $isAlarmsView, content: {
+                                    ContentView()
+                                    
+                                })
+                        );
+                }
+                .offset(x: -250, y: -30)
+            }
             
             
             
