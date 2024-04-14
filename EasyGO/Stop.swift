@@ -59,16 +59,11 @@ struct Stop: View {
                 
                 
                 
-                HStack(spacing: 16) {
-                    NavigationStack {
-                        HStack(alignment: .top, spacing: 10) {
-                            //                            NavigationLink(destination: Menu(), isActive: $isMenuView) { EmptyView()}.hidden().disabled(true)
-                            
+                ZStack() {
                             NavigationLink(isActive: $isMenuView) {
                                 SelectMenu()
                             } label: {
                             }
-                            
                             Button(action: {
                                 
                                 isMenuView = true
@@ -79,16 +74,11 @@ struct Stop: View {
                             }
                             .fullScreenCover(isPresented: $isMenuView, content: {
                                 SelectMenu()
-                                
                             })
-                            
-                            
-                        }
-                    }
                 }
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
                 .frame(width: 43, height: 44)
-                .offset(x: -187.50, y: -340)
+                .offset(x: -187.50, y: -330)
             }
             .frame(width: 430, height: 846)
             .offset(x: 0, y: -53)

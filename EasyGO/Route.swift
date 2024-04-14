@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Route: View {
+    
+    @State public var isMenuView = false
+    
     var body: some View {
         ZStack() {
             ZStack() {
@@ -51,16 +54,28 @@ struct Route: View {
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
                 .offset(x: 23.50, y: -330)
-                HStack(spacing: 16) {
-                    HStack(alignment: .top, spacing: 10) {
-                        Image("Menu")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    }
+                
+                ZStack() {
+                            NavigationLink(isActive: $isMenuView) {
+                                SelectMenu()
+                            } label: {
+                            }
+                            Button(action: {
+                                
+                                isMenuView = true
+                            }) {
+                                Image("Menu")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            }
+                            .fullScreenCover(isPresented: $isMenuView, content: {
+                                SelectMenu()
+                            })
                 }
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
                 .frame(width: 43, height: 44)
-                .offset(x: -187.50, y: -340)
+                .offset(x: -187.50, y: -330)
+                
             }
             .frame(width: 430, height: 846)
             .offset(x: 0, y: -53)
