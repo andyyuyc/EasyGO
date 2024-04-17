@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3097552BCF6AA700C8C87C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2A3097542BCF6AA700C8C87C /* FirebaseFirestore */; };
+		2A3097572BCF6BCF00C8C87C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A3097562BCF6BCE00C8C87C /* GoogleService-Info.plist */; };
+		2A3097582BCF6BCF00C8C87C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A3097562BCF6BCE00C8C87C /* GoogleService-Info.plist */; };
+		2A3097592BCF6BCF00C8C87C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A3097562BCF6BCE00C8C87C /* GoogleService-Info.plist */; };
 		A18BD2A12BC72632002A431D /* EasyGOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A02BC72632002A431D /* EasyGOApp.swift */; };
 		A18BD2A32BC72632002A431D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A22BC72632002A431D /* ContentView.swift */; };
 		A18BD2A52BC72632002A431D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A42BC72632002A431D /* Item.swift */; };
@@ -45,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A3097562BCF6BCE00C8C87C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A18BD29D2BC72632002A431D /* EasyGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18BD2A02BC72632002A431D /* EasyGOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOApp.swift; sourceTree = "<group>"; };
 		A18BD2A22BC72632002A431D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3097552BCF6AA700C8C87C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +135,7 @@
 				A18BD2D82BC7BE26002A431D /* Alarms.swift */,
 				A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */,
 				A18BD2DE2BC84DDB002A431D /* Request.swift */,
+				2A3097562BCF6BCE00C8C87C /* GoogleService-Info.plist */,
 				A18BD2A62BC72633002A431D /* Assets.xcassets */,
 				A18BD2A82BC72633002A431D /* Preview Content */,
 			);
@@ -176,6 +183,9 @@
 			dependencies = (
 			);
 			name = EasyGO;
+			packageProductDependencies = (
+				2A3097542BCF6AA700C8C87C /* FirebaseFirestore */,
+			);
 			productName = EasyGO;
 			productReference = A18BD29D2BC72632002A431D /* EasyGO.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +258,9 @@
 				Base,
 			);
 			mainGroup = A18BD2942BC72632002A431D;
+			packageReferences = (
+				2A3097532BCF6AA700C8C87C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A18BD29E2BC72632002A431D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,6 +279,7 @@
 			files = (
 				A18BD2AA2BC72633002A431D /* Preview Assets.xcassets in Resources */,
 				A18BD2A72BC72633002A431D /* Assets.xcassets in Resources */,
+				2A3097572BCF6BCF00C8C87C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3097582BCF6BCF00C8C87C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3097592BCF6BCF00C8C87C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +415,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -632,6 +649,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A3097532BCF6AA700C8C87C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A3097542BCF6AA700C8C87C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A3097532BCF6AA700C8C87C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A18BD2952BC72632002A431D /* Project object */;
 }

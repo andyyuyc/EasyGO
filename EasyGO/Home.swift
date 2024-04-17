@@ -157,6 +157,9 @@ struct Home: View {
             }
             .frame(width: 430, height: 105.50)
             .offset(x: 0, y: 413.75)
+            .onAppear {
+                            print("Home view appeared")
+                        }
             Ellipse()
                 .foregroundColor(.clear)
                 .frame(width: 49, height: 46)
@@ -164,7 +167,9 @@ struct Home: View {
         }
         .frame(width: 430, height: 932)
         .background(.white);
+        
     }
+        
 }
 
 struct Home_Previews: PreviewProvider {

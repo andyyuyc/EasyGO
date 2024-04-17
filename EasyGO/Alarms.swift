@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct Alarms: View {
     
     @State private var selectedDate = Date()
     @State public var isContentView = false
+    private let db = Firestore.firestore()
     
     var body: some View {
         ZStack() {
@@ -52,6 +54,9 @@ struct Alarms: View {
                                     .offset(x: -30, y: 400)
                 
 //                Button(action: {
+//                    
+//                    let time = Timestamp(date: selectedDate)
+//                    self.addTimeToFirestore(time)
 //
 //                }) {
 //                    Text("Set")
@@ -118,6 +123,9 @@ struct Alarms: View {
                 
                 ZStack() {
                     Button(action: {
+                        print("Selected Date: \(selectedDate)")
+                        let time = Timestamp(date: selectedDate)
+                        self.addTimeToFirestore(time)
                         
                     }) {
                         Text("Set")
@@ -127,19 +135,27 @@ struct Alarms: View {
                     }
                     .offset(x: 153.50, y: 400)
                 }
-                
-                
-                
-                
-                
-                
-                
-                
+
             }
             .frame(width: 430, height: 846)
             .offset(x: 0, y: -53)
             
             
+        }
+        .onAppear {
+                        print("View appeared")
+                    }
+    }
+    
+    private func addTimeToFirestore(_ time: Timestamp) {
+        db.collection("StopTime").addDocument(data: [
+            "time": time
+        ]) { error in
+            if let error = error {
+                print("Error adding document: \(error)")
+            } else {
+                print("Document added successfully")
+            }
         }
     }
 }
