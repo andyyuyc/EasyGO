@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10E769A2BDAF0D300155836 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E76992BDAF0D300155836 /* Feedback.swift */; };
 		A18BD2A12BC72632002A431D /* EasyGOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A02BC72632002A431D /* EasyGOApp.swift */; };
 		A18BD2A32BC72632002A431D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A22BC72632002A431D /* ContentView.swift */; };
 		A18BD2A52BC72632002A431D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A42BC72632002A431D /* Item.swift */; };
@@ -16,14 +17,13 @@
 		A18BD2BE2BC72633002A431D /* EasyGOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2BD2BC72633002A431D /* EasyGOUITests.swift */; };
 		A18BD2C02BC72633002A431D /* EasyGOUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2BF2BC72633002A431D /* EasyGOUITestsLaunchTests.swift */; };
 		A18BD2CD2BC7B1F7002A431D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2CC2BC7B1F7002A431D /* Route.swift */; };
-		A18BD2CF2BC7B3D0002A431D /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2CE2BC7B3D0002A431D /* Stop.swift */; };
+		A18BD2CF2BC7B3D0002A431D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2CE2BC7B3D0002A431D /* Home.swift */; };
 		A18BD2D12BC7B53C002A431D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D02BC7B53C002A431D /* Message.swift */; };
 		A18BD2D32BC7B647002A431D /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D22BC7B647002A431D /* FirstPage.swift */; };
 		A18BD2D52BC7B898002A431D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D42BC7B898002A431D /* Profile.swift */; };
 		A18BD2D72BC7BD6C002A431D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D62BC7BD6C002A431D /* Schedule.swift */; };
 		A18BD2D92BC7BE26002A431D /* Alarms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2D82BC7BE26002A431D /* Alarms.swift */; };
 		A18BD2DB2BC7C0E9002A431D /* SelectMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */; };
-		A18BD2DD2BC84BAD002A431D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DC2BC84BAD002A431D /* Home.swift */; };
 		A18BD2DF2BC84DDB002A431D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2DE2BC84DDB002A431D /* Request.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A10E76992BDAF0D300155836 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		A18BD29D2BC72632002A431D /* EasyGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18BD2A02BC72632002A431D /* EasyGOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOApp.swift; sourceTree = "<group>"; };
 		A18BD2A22BC72632002A431D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,14 +58,13 @@
 		A18BD2BD2BC72633002A431D /* EasyGOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOUITests.swift; sourceTree = "<group>"; };
 		A18BD2BF2BC72633002A431D /* EasyGOUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A18BD2CC2BC7B1F7002A431D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		A18BD2CE2BC7B3D0002A431D /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		A18BD2CE2BC7B3D0002A431D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		A18BD2D02BC7B53C002A431D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A18BD2D22BC7B647002A431D /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
 		A18BD2D42BC7B898002A431D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A18BD2D62BC7BD6C002A431D /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		A18BD2D82BC7BE26002A431D /* Alarms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarms.swift; sourceTree = "<group>"; };
 		A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMenu.swift; sourceTree = "<group>"; };
-		A18BD2DC2BC84BAD002A431D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		A18BD2DE2BC84DDB002A431D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,10 +118,9 @@
 			children = (
 				A18BD2A02BC72632002A431D /* EasyGOApp.swift */,
 				A18BD2A42BC72632002A431D /* Item.swift */,
-				A18BD2DC2BC84BAD002A431D /* Home.swift */,
 				A18BD2A22BC72632002A431D /* ContentView.swift */,
 				A18BD2CC2BC7B1F7002A431D /* Route.swift */,
-				A18BD2CE2BC7B3D0002A431D /* Stop.swift */,
+				A18BD2CE2BC7B3D0002A431D /* Home.swift */,
 				A18BD2D02BC7B53C002A431D /* Message.swift */,
 				A18BD2D22BC7B647002A431D /* FirstPage.swift */,
 				A18BD2D42BC7B898002A431D /* Profile.swift */,
@@ -129,6 +128,7 @@
 				A18BD2D82BC7BE26002A431D /* Alarms.swift */,
 				A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */,
 				A18BD2DE2BC84DDB002A431D /* Request.swift */,
+				A10E76992BDAF0D300155836 /* Feedback.swift */,
 				A18BD2A62BC72633002A431D /* Assets.xcassets */,
 				A18BD2A82BC72633002A431D /* Preview Content */,
 			);
@@ -297,11 +297,11 @@
 				A18BD2D92BC7BE26002A431D /* Alarms.swift in Sources */,
 				A18BD2D72BC7BD6C002A431D /* Schedule.swift in Sources */,
 				A18BD2DB2BC7C0E9002A431D /* SelectMenu.swift in Sources */,
-				A18BD2CF2BC7B3D0002A431D /* Stop.swift in Sources */,
+				A18BD2CF2BC7B3D0002A431D /* Home.swift in Sources */,
 				A18BD2D32BC7B647002A431D /* FirstPage.swift in Sources */,
+				A10E769A2BDAF0D300155836 /* Feedback.swift in Sources */,
 				A18BD2D12BC7B53C002A431D /* Message.swift in Sources */,
 				A18BD2A52BC72632002A431D /* Item.swift in Sources */,
-				A18BD2DD2BC84BAD002A431D /* Home.swift in Sources */,
 				A18BD2A12BC72632002A431D /* EasyGOApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

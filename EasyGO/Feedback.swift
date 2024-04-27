@@ -1,5 +1,5 @@
 //
-//  Request.swift
+//  Feedback.swift
 //  EasyGO
 //
 //  Created by Andy Yu on 4/11/24.
@@ -9,13 +9,14 @@ import SwiftUI
 
 
 
-struct Request: View {
+struct Feedback: View {
     
     @State public var isMenuView = false
-    @State private var shuttleSelection: String = ""
-    @State private var shuttleTime: String = ""
-    @State private var shuttleStop: String = ""
-    @State private var additionalInfo: String = ""
+    @State private var isName: String = ""
+    @State private var isEmail: String = ""
+    @State private var isFeedback: String = ""
+    @State private var wordCount: Int = 0
+    
     
     var body: some View {
         ZStack() {
@@ -47,85 +48,91 @@ struct Request: View {
                             .aspectRatio(contentMode: .fill)
                     )
                     .cornerRadius(25)
-                    .offset(x: 0, y: 260)
+                    .offset(x: 0, y: 150)
                 
                 
                 
                 Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 51, height: 51)
-                        .background(
-                            Image("Survey")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        )
-                        .offset(x: 175.50, y: -237.50)
+                    .foregroundColor(.clear)
+                    .frame(width: 51, height: 51)
+                    .background(
+                        Image("Survey")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    )
+                    .offset(x: 175.50, y: -237.50)
                 
                 
                 
-                Text("Stop Request")
-                  .font(Font.custom("Roboto", size: 24))
-                  .foregroundColor(.white)
-                  .offset(x: 0, y: -13)
+                Text("Feedback")
+                    .font(Font.custom("Roboto", size: 24))
+                    .foregroundColor(.white)
+                    .offset(x: 0, y: -123)
                 
                 
-                Text("Which shuttle you will take?")
-                  .font(Font.custom("Roboto", size: 20))
-                  .foregroundColor(.black)
-                  .offset(x: -84.50, y: 45)
-                
-                
-                
-                TextField("Text...", text: $shuttleSelection)
-                                .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(8)
-                                .offset(x: -30, y: 95)
-                                .padding(.horizontal, 40)
+                Text("Name")
+                    .font(Font.custom("Roboto", size: 20))
+                    .foregroundColor(.black)
+                    .offset(x: -180.50, y: -65)
                 
                 
                 
-                Text("When will you take the shuttle?")
-                  .font(Font.custom("Roboto", size: 20))
-                  .foregroundColor(.black)
-                  .offset(x: -70, y: 145)
+                TextField("Text...", text: $isName)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .offset(x: -30, y: -15)
+                    .padding(.horizontal, 40)
+                    .multilineTextAlignment(.leading)
                 
                 
-                TextField("Text...", text: $shuttleTime)
-                                .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(8)
-                                .offset(x: -30, y: 195)
-                                .padding(.horizontal, 40)
                 
-            
-                Text("Where do you want the driver to stop?")
-                  .font(Font.custom("Roboto", size: 20))
-                  .foregroundColor(.black)
-                  .offset(x: -40, y: 245)
-                
-                TextField("Text...", text: $shuttleStop)
-                                .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(8)
-                                .offset(x: -30, y: 295)
-                                .padding(.horizontal, 40)
+                Text("Email")
+                    .font(Font.custom("Roboto", size: 20))
+                    .foregroundColor(.black)
+                    .offset(x: -183, y: 35)
                 
                 
-                Text("Anything else you want to tell the driver")
-                  .font(Font.custom("Roboto", size: 20))
-                  .foregroundColor(.black)
-                  .offset(x: -33, y: 345)
+                TextField("Text...", text: $isEmail)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .offset(x: -30, y: 85)
+                    .padding(.horizontal, 40)
+                    .multilineTextAlignment(.leading)
                 
-                TextField("Text...", text: $additionalInfo)
-                                .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(8)
-                                .offset(x: -30, y:395)
-                                .padding(.horizontal, 40)
-        
+                
+                Text("Feedback")
+                    .font(Font.custom("Roboto", size: 20))
+                    .foregroundColor(.black)
+                    .offset(x: -165, y: 145)
+                
+                
+                TextEditor(text: $isFeedback)
+                    .background(Color.gray.opacity(0.2))
+                    .multilineTextAlignment(.leading)
+                    .cornerRadius(8)
+                    .autocapitalization(.words)
+                    .disableAutocorrection(true)
+                    .padding()
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 290)
+                    .offset(x: -5, y: 295)
+                    .onChange(of: isFeedback) { _ in
+                        let words = isFeedback.split { $0 == " " || $0.isNewline }
+                        self.wordCount = words.count
+                    }
+
+                
+                Text("\(wordCount)")
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                    .padding(.trailing)
+                    .padding()
+                    .offset(x: 180, y: 146)
+                
+                
                 Button(action: {
-   
+                    
                 }) {
                     
                     Rectangle()
@@ -138,7 +145,7 @@ struct Request: View {
                         )
                 }
                 .offset(x: 180, y: 395)
-            
+                
                 
                 
                 HStack(spacing: 0) {
@@ -156,21 +163,21 @@ struct Request: View {
                 
                 
                 ZStack() {
-                            NavigationLink(isActive: $isMenuView) {
-                                SelectMenu()
-                            } label: {
-                            }
-                            Button(action: {
-                                
-                                isMenuView = true
-                            }) {
-                                Image("Menu")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                            }
-                            .fullScreenCover(isPresented: $isMenuView, content: {
-                                SelectMenu()
-                            })
+                    NavigationLink(isActive: $isMenuView) {
+                        SelectMenu()
+                    } label: {
+                    }
+                    Button(action: {
+                        
+                        isMenuView = true
+                    }) {
+                        Image("Menu")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }
+                    .fullScreenCover(isPresented: $isMenuView, content: {
+                        SelectMenu()
+                    })
                 }
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
                 .frame(width: 43, height: 44)
@@ -194,34 +201,46 @@ struct Request: View {
                 .offset(x: 0, y: 0)
                 
                 
-                ZStack() {
-                    Text("Profile")
-                        .font(Font.custom("Roboto", size: 10))
-                        .foregroundColor(Color(red: 0.41, green: 0.38, blue: 0.45))
-                        .offset(x: 0, y: 15.50)
-                    ZStack() {
-                        ZStack() {
+            Button(action: {
+                    // 在这里添加按钮被点击时的操作
+                }) {
+                    ZStack {
+                        Text("Profile")
+                            .font(Font.custom("Roboto", size: 10))
+                            .foregroundColor(Color(red: 0.41, green: 0.38, blue: 0.45))
+                            .offset(x: 0, y: 26.50)
+                            .frame(width: 100, height: 30)
+                    
+                        
+                        
+                        ZStack {
                             Image("Profile")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                         }
                         .frame(width: 20.77, height: 10.34)
                         .offset(x: 0, y: 0)
+                        
                     }
                     .frame(width: 20.77, height: 23.31)
                     .offset(x: 0.56, y: -11.64)
                 }
                 .frame(width: 37.65, height: 46.58)
                 .offset(x: 170.82, y: 0)
+
                 
                 
-                ZStack() {
-                    Text("Messgae")
-                        .font(Font.custom("Roboto", size: 10))
-                        .foregroundColor(Color(red: 0.41, green: 0.38, blue: 0.45))
-                        .offset(x: 0, y: 15.50)
-                    ZStack() {
-                        ZStack() {
+                Button(action: {
+                    // 在这里添加按钮被点击时的操作
+                }) {
+                    ZStack {
+                        Text("Message")
+                            .font(Font.custom("Roboto", size: 10))
+                            .foregroundColor(Color(red: 0.41, green: 0.38, blue: 0.45))
+                            .offset(x: 0, y: 30.50)
+                            .frame(width: 100, height: 30)
+                        
+                        ZStack {
                             Image("Message")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
@@ -234,15 +253,19 @@ struct Request: View {
                 }
                 .frame(width: 41, height: 55)
                 .offset(x: 92.50, y: 0)
+
                 
                 
-                ZStack() {
-                    Text("Stop")
-                        .font(Font.custom("Roboto", size: 10))
-                        .foregroundColor(Color(red: 0.55, green: 0.36, blue: 1))
-                        .offset(x: 0, y: 15.50)
-                    ZStack() {
-                        ZStack() {
+                Button(action: {
+                    // 在这里添加按钮被点击时的操作
+                }) {
+                    ZStack {
+                        Text("Stop")
+                            .font(Font.custom("Roboto", size: 10))
+                            .foregroundColor(Color(red: 0.55, green: 0.36, blue: 1))
+                            .offset(x: 0, y: 30.50)
+                        
+                        ZStack {
                             Image("Stop_light")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
@@ -255,6 +278,7 @@ struct Request: View {
                 }
                 .frame(width: 35.05, height: 46.15)
                 .offset(x: -172.47, y: 0)
+
                 
                 
                 ZStack() {
@@ -300,10 +324,11 @@ struct Request: View {
     }
 }
 
-struct Request_Previews: PreviewProvider {
+struct Feedback_Previews: PreviewProvider {
     static var previews: some View {
-        Request()
+        Feedback()
     }
 }
+
 
 

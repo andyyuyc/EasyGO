@@ -1,6 +1,19 @@
+//
+//  Stop.swift
+//  EasyGO
+//
+//  Created by Andy Yu on 4/11/24.
+//
+
 import SwiftUI
 
+
+
 struct Home: View {
+    
+    @State public var isMenuView = false
+    @State public var isFeedbackView = false
+    
     var body: some View {
         ZStack() {
             ZStack() {
@@ -22,6 +35,42 @@ struct Home: View {
                             .aspectRatio(contentMode: .fill)
                     )
                 
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(width: 430, height: 426)
+                    .background(
+                        Image("Stop_1")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    )
+                    .cornerRadius(25)
+                    .offset(x: 0, y: 210)
+                
+                NavigationLink(isActive: $isFeedbackView) {
+                    Feedback()
+                } label: {
+                }
+                Button(action: {
+                    isFeedbackView = true
+                }) {
+                    
+                    Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 51, height: 51)
+                            .background(
+                                Image("Survey")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            )
+                            .fullScreenCover(isPresented: $isFeedbackView, content: {
+                                Feedback()
+                            })
+                }
+                .offset(x: 175.50, y: -237.50)
+                
+                
+                
+                
                 HStack(spacing: 0) {
                     Text("Search")
                         .font(Font.custom("SF Pro", size: 17))
@@ -33,19 +82,33 @@ struct Home: View {
                 .background(Color(red: 0.46, green: 0.46, blue: 0.50).opacity(0.24))
                 .cornerRadius(10)
                 .offset(x: 23.50, y: -330)
-                HStack(spacing: 16) {
-                    HStack(alignment: .top, spacing: 10) {
-                        Image("Menu")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    }
+                
+                
+                
+                ZStack() {
+                            NavigationLink(isActive: $isMenuView) {
+                                SelectMenu()
+                            } label: {
+                            }
+                            Button(action: {
+                                
+                                isMenuView = true
+                            }) {
+                                Image("Menu")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            }
+                            .fullScreenCover(isPresented: $isMenuView, content: {
+                                SelectMenu()
+                            })
                 }
                 .padding(EdgeInsets(top: 11, leading: 0, bottom: 11, trailing: 0))
                 .frame(width: 43, height: 44)
-                .offset(x: -187.50, y: -340)
+                .offset(x: -187.50, y: -330)
             }
             .frame(width: 430, height: 846)
             .offset(x: 0, y: -53)
+            
             
             
             
@@ -106,11 +169,11 @@ struct Home: View {
                 ZStack() {
                     Text("Stop")
                         .font(Font.custom("Roboto", size: 10))
-                        .foregroundColor(Color(red: 0.41, green: 0.38, blue: 0.45))
+                        .foregroundColor(Color(red: 0.55, green: 0.36, blue: 1))
                         .offset(x: 0, y: 15.50)
                     ZStack() {
                         ZStack() {
-                            Image("Stop")
+                            Image("Stop_light")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                         }
@@ -172,3 +235,5 @@ struct Home_Previews: PreviewProvider {
         Home()
     }
 }
+
+

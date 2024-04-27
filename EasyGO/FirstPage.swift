@@ -35,6 +35,19 @@ struct FirstPage: View {
                     )
                 
                 
+                Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 51, height: 51)
+                        .background(
+                            Image("Survey")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        )
+                        .offset(x: 175.50, y: -237.50)
+                
+                
+                
+                
                 NavigationLink(isActive: $isScheduleView) {
                     Schedule()
                 } label: {

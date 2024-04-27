@@ -45,6 +45,18 @@ struct Alarms: View {
                     .offset(x: 0, y: 300)
                 
                 
+                Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 51, height: 51)
+                        .background(
+                            Image("Survey")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        )
+                        .offset(x: 175.50, y: -237.50)
+                
+                
+                
                 DatePicker("Set Alarm", selection: $selectedDate, displayedComponents: .hourAndMinute)
                                     .datePickerStyle(WheelDatePickerStyle())
                                     .labelsHidden()

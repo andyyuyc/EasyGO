@@ -44,6 +44,18 @@ struct Message: View {
                         .cornerRadius(25)
                         .offset(x: 0, y: 210)
                 
+                Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 51, height: 51)
+                        .background(
+                            Image("Survey")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        )
+                        .offset(x: 175.50, y: -237.50)
+                
+                
+                
                 HStack(spacing: 0) {
                     Text("Search")
                         .font(Font.custom("SF Pro", size: 17))
