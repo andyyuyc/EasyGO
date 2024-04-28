@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-
-
+import Firebase
 
 struct Request: View {
     
+    private let db = Firestore.firestore()
     @State public var isMenuView = false
     @State private var shuttleSelection: String = ""
     @State private var shuttleTime: String = ""
@@ -125,7 +125,7 @@ struct Request: View {
                                 .padding(.horizontal, 40)
         
                 Button(action: {
-   
+                    self.addStopToFirestore(shuttleSelection, location: shuttleStop, time: shuttleTime, extraInfo: additionalInfo)
                 }) {
                     
                     Rectangle()
@@ -298,6 +298,21 @@ struct Request: View {
         .frame(width: 430, height: 932)
         .background(.white);
     }
+    
+    private func addStopToFirestore(_ shuttleType: String, location: String, time: String, extraInfo: String) {
+        db.collection("StopRequest").addDocument(data: [
+                "shuttleType": shuttleSelection,
+                "location": shuttleStop,
+                "time": shuttleTime,
+                "extraInfo": additionalInfo
+            ]) { error in
+                if let error = error {
+                    print("Error adding document: \(error)")
+                } else {
+                    print("Document added successfully")
+                }
+            }
+        }
 }
 
 struct Request_Previews: PreviewProvider {

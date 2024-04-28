@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-
+import Firebase
 
 
 struct Feedback: View {
     
+    private let db = Firestore.firestore()
     @State public var isMenuView = false
     @State private var isName: String = ""
     @State private var isEmail: String = ""
@@ -132,7 +133,7 @@ struct Feedback: View {
                 
                 
                 Button(action: {
-                    
+                    self.addFeedbackToFirestore(isName, email: isEmail, feedbackText: isFeedback)
                 }) {
                     
                     Rectangle()
@@ -322,6 +323,20 @@ struct Feedback: View {
         .frame(width: 430, height: 932)
         .background(.white);
     }
+    
+    private func addFeedbackToFirestore(_ name: String, email: String, feedbackText: String) {
+        db.collection("Feedback").addDocument(data: [
+                "name": isName,
+                "email": isEmail,
+                "feedbackText": isFeedback
+            ]) { error in
+                if let error = error {
+                    print("Error adding document: \(error)")
+                } else {
+                    print("Document added successfully")
+                }
+            }
+        }
 }
 
 struct Feedback_Previews: PreviewProvider {

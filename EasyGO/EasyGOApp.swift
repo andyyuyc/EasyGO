@@ -7,9 +7,17 @@
 
 import SwiftUI
 import SwiftData
+import Firebase
 
 @main
 struct EasyGOApp: App {
+    
+    @UIApplicationDelegateAdaptor(NotificationDelegate.self) var notificationDelegate
+    
+    init(){
+            FirebaseApp.configure()
+        }
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,

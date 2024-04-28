@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct Alarms: View {
     
-    @State private var selectedDate = Date()
+    @State private var selectedTime = Date()
     @State public var isContentView = false
     
     var body: some View {
@@ -57,7 +58,7 @@ struct Alarms: View {
                 
                 
                 
-                DatePicker("Set Alarm", selection: $selectedDate, displayedComponents: .hourAndMinute)
+                DatePicker("Set Alarm", selection: $selectedTime, displayedComponents: .hourAndMinute)
                                     .datePickerStyle(WheelDatePickerStyle())
                                     .labelsHidden()
                                     .frame(width: 200, height: 100)
@@ -130,7 +131,8 @@ struct Alarms: View {
                 
                 ZStack() {
                     Button(action: {
-                        
+//                        requestPrermission()
+                        scheduleNotification(at: self.selectedTime)
                     }) {
                         Text("Set")
                             .font(Font.custom("SF Pro", size: 20))
@@ -139,20 +141,60 @@ struct Alarms: View {
                     }
                     .offset(x: 153.50, y: 400)
                 }
-                
-                
-                
-                
-                
-                
-                
-                
             }
             .frame(width: 430, height: 846)
             .offset(x: 0, y: -53)
-            
-            
         }
+    }
+    
+    func requestPrermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("Notifications enabled!")
+            } else if let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    func scheduleNotification(at date: Date) {
+//        let content = UNMutableNotificationContent()
+//        content.title = "EasyGo"
+//        content.body = "Your shuttle is coming soon!"
+//        content.sound = UNNotificationSound.default
+//        
+//        let calendar = Calendar.current
+//        let components = calendar.dateComponents([.hour, .minute], from: date)
+//        
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+//        
+//        let request = UNNotificationRequest(identifier: "alarmNotification", content: content, trigger: trigger)
+//        
+//        UNUserNotificationCenter.current().add(request) { error in
+//            if let error = error {
+//                print("Error scheduling notification: \(error)")
+//            } else {
+//                print("Notification scheduled successfully")
+//            }
+//        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "EasyGo"
+        content.subtitle = "Your shuttle is coming soon!"
+        content.sound = UNNotificationSound.default
+
+        // show this notification five seconds from now
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (5), repeats: false)
+
+        // choose a random identifier
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    print("Notification scheduled")
+                }
+            }
     }
 }
 

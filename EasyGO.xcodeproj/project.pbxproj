@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A9CDFB42BDECFA900BF6EF0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2A9CDFB32BDECFA900BF6EF0 /* FirebaseFirestore */; };
+		2A9CDFB62BDED01300BF6EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9CDFB52BDED01300BF6EF0 /* GoogleService-Info.plist */; };
+		2A9CDFB72BDED01300BF6EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9CDFB52BDED01300BF6EF0 /* GoogleService-Info.plist */; };
+		2A9CDFB82BDED01300BF6EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9CDFB52BDED01300BF6EF0 /* GoogleService-Info.plist */; };
+		2A9CDFBA2BDEDA2700BF6EF0 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9CDFB92BDEDA2700BF6EF0 /* NotificationDelegate.swift */; };
+		2A9CDFBB2BDEDA2700BF6EF0 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9CDFB92BDEDA2700BF6EF0 /* NotificationDelegate.swift */; };
+		2A9CDFBC2BDEDA2700BF6EF0 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9CDFB92BDEDA2700BF6EF0 /* NotificationDelegate.swift */; };
 		A10E769A2BDAF0D300155836 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E76992BDAF0D300155836 /* Feedback.swift */; };
 		A18BD2A12BC72632002A431D /* EasyGOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A02BC72632002A431D /* EasyGOApp.swift */; };
 		A18BD2A32BC72632002A431D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD2A22BC72632002A431D /* ContentView.swift */; };
@@ -45,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A9CDFB52BDED01300BF6EF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2A9CDFB92BDEDA2700BF6EF0 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
 		A10E76992BDAF0D300155836 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		A18BD29D2BC72632002A431D /* EasyGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18BD2A02BC72632002A431D /* EasyGOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGOApp.swift; sourceTree = "<group>"; };
@@ -73,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9CDFB42BDECFA900BF6EF0 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +139,8 @@
 				A18BD2DA2BC7C0E9002A431D /* SelectMenu.swift */,
 				A18BD2DE2BC84DDB002A431D /* Request.swift */,
 				A10E76992BDAF0D300155836 /* Feedback.swift */,
+				2A9CDFB92BDEDA2700BF6EF0 /* NotificationDelegate.swift */,
+				2A9CDFB52BDED01300BF6EF0 /* GoogleService-Info.plist */,
 				A18BD2A62BC72633002A431D /* Assets.xcassets */,
 				A18BD2A82BC72633002A431D /* Preview Content */,
 			);
@@ -176,6 +188,9 @@
 			dependencies = (
 			);
 			name = EasyGO;
+			packageProductDependencies = (
+				2A9CDFB32BDECFA900BF6EF0 /* FirebaseFirestore */,
+			);
 			productName = EasyGO;
 			productReference = A18BD29D2BC72632002A431D /* EasyGO.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +263,9 @@
 				Base,
 			);
 			mainGroup = A18BD2942BC72632002A431D;
+			packageReferences = (
+				2A9CDFB22BDECFA900BF6EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A18BD29E2BC72632002A431D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,6 +284,7 @@
 			files = (
 				A18BD2AA2BC72633002A431D /* Preview Assets.xcassets in Resources */,
 				A18BD2A72BC72633002A431D /* Assets.xcassets in Resources */,
+				2A9CDFB62BDED01300BF6EF0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9CDFB72BDED01300BF6EF0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9CDFB82BDED01300BF6EF0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +322,7 @@
 				A18BD2D32BC7B647002A431D /* FirstPage.swift in Sources */,
 				A10E769A2BDAF0D300155836 /* Feedback.swift in Sources */,
 				A18BD2D12BC7B53C002A431D /* Message.swift in Sources */,
+				2A9CDFBA2BDEDA2700BF6EF0 /* NotificationDelegate.swift in Sources */,
 				A18BD2A52BC72632002A431D /* Item.swift in Sources */,
 				A18BD2A12BC72632002A431D /* EasyGOApp.swift in Sources */,
 			);
@@ -311,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18BD2B42BC72633002A431D /* EasyGOTests.swift in Sources */,
+				2A9CDFBB2BDEDA2700BF6EF0 /* NotificationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18BD2C02BC72633002A431D /* EasyGOUITestsLaunchTests.swift in Sources */,
+				2A9CDFBC2BDEDA2700BF6EF0 /* NotificationDelegate.swift in Sources */,
 				A18BD2BE2BC72633002A431D /* EasyGOUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A9CDFB22BDECFA900BF6EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A9CDFB32BDECFA900BF6EF0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A9CDFB22BDECFA900BF6EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A18BD2952BC72632002A431D /* Project object */;
 }
